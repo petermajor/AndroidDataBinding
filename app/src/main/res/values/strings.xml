@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Data Binding</string>
+
+    <string name="title_activity_login">Sign In</string>
+
+    <string name="label_username">Username</string>
+    <string name="label_password">Password</string>
+    <string name="label_login">Sign in</string>
+</resources>
