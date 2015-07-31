@@ -3,20 +3,18 @@ package com.petermajor.databinding;
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;
 import android.util.Log;
-import android.view.View;
-import android.widget.Button;
 
 public class LoginViewModel extends BaseObservable {
 
     private String username;
     private String password;
 
-    private Button.OnClickListener loginCommand;
+    private Command loginCommand;
 
     public LoginViewModel(){
-        loginCommand = new View.OnClickListener() {
+        loginCommand = new Command() {
             @Override
-            public void onClick(View v) {
+            public void onExecute() {
                 Log.d("db", String.format("username=%s;password=%s", username, password));
             }
         };
@@ -32,7 +30,7 @@ public class LoginViewModel extends BaseObservable {
         return this.password;
     }
 
-    public Button.OnClickListener getLoginCommand() { return loginCommand; }
+    public Command getLoginCommand() { return loginCommand; }
 
     public void setUsername(String username) {
         this.username = username;
