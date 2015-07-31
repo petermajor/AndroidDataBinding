@@ -39,6 +39,7 @@
             android:id="@+id/button_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/label_login" />
+            android:text="@string/label_login"
+            android:setOnClickListener="@{viewModel.getLoginCommand}"/>
     </LinearLayout>
 </layout>
