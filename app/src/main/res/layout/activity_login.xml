@@ -35,11 +35,18 @@
             android:inputType="textPassword"
             android:selectAllOnFocus="true"
             android:text="@{viewModel.password}"/>
+        <!--<Button-->
+            <!--android:id="@+id/button_login"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/label_login"-->
+            <!--android:setOnClickListener="@{viewModel.loginCommand}"/>-->
         <Button
             android:id="@+id/button_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/label_login"
-            android:setOnClickListener="@{viewModel.getLoginCommand}"/>
+            android:onClick="@{viewModel.onLogin}"/>
+
     </LinearLayout>
 </layout>
