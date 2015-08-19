@@ -35,9 +35,6 @@ public class LoginViewModel extends BaseObservable {
     public Command getLoginCommand() { return loginCommand; }
 
     public void setUsername(String username) {
-        if (stringEquals(this.username, username))
-            return;
-
         this.username = username;
 
         if (!isInNotification)
@@ -45,9 +42,6 @@ public class LoginViewModel extends BaseObservable {
     }
 
     public void setPassword(String password) {
-        if (stringEquals(this.password, password))
-            return;
-
         this.password = password;
 
         if (!isInNotification)
