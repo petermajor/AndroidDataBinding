@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
     <data>
         <variable name="viewModel" type="com.petermajor.databinding.LoginViewModel"/>
@@ -23,18 +24,28 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:selectAllOnFocus="true"
-            android:text="@{viewModel.username}"/>
+            android:text="@{viewModel.username}"
+            android:addTextChangedListener="@{viewModel.onUsernameChanged}"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/label_username"/>
+            android:text="@string/label_password"/>
         <EditText
             android:id="@+id/input_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
             android:selectAllOnFocus="true"
-            android:text="@{viewModel.password}"/>
+            android:text="@{viewModel.password}"
+            android:addTextChangedListener="@{viewModel.onPasswordChanged}"/>
+        <!--<EditText-->
+            <!--android:id="@+id/input_password"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:inputType="textPassword"-->
+            <!--android:selectAllOnFocus="true"-->
+            <!--android:text="@{viewModel.password}"-->
+            <!--app:onTextChanged="@{viewModel.setPassword}"/>-->
         <Button
             android:id="@+id/button_login"
             android:layout_width="match_parent"
